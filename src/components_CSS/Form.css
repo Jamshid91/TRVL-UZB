@@ -1,0 +1,104 @@
+.form-content {
+  width: 40%;
+  padding: 20px 50px;
+  background-color: #0009;
+  border-radius: 5px;
+  text-align: center;
+}
+form h2 {
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  /* margin-bottom: 5px; */
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+}
+.form-inputs p {
+  color: rgb(250, 77, 77);
+  font-size: 15px;
+  font-weight: 300;
+}
+.form-label {
+  color: #fff;
+}
+.MuiFormLabel-root {
+  color: #fff !important;
+}
+.MuiOutlinedInput-root {
+  color: #fff !important;
+  padding: 0 !important;
+}
+.MuiOutlinedInput-notchedOutline {
+  border: 1.5px solid #fff !important;
+  height: 55px !important;
+}
+
+.form-succes {
+  color: #fff;
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-input-btn {
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-input-btn:hover {
+  background: #fff;
+  color: #242424;
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .form-content {
+    width: 60%;
+  }
+  form h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .form-content {
+    width: 100%;
+    height: 110vh;
+  }
+}
+@media screen and (max-width: 360px) {
+  .form-content {
+    height: 105vh;
+    margin-top: -200px;
+  }
+}

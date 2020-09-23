@@ -7,11 +7,13 @@ import { Services } from "./pages/Services";
 import { Home } from "./pages/Home";
 import { SignUp } from "./pages/SignUp";
 import { Products } from "./pages/Products";
+import { ModalInfo } from "./components_JS/ModalInfo";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <ModalInfo />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/services" component={Services} />

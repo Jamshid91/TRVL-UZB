@@ -159,3 +159,30 @@
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 560px) {
+  .footer-container {
+    padding: 20px;
+    height: 170vh;
+  }
+  .footer-subscription {
+    margin-top: -400px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer-container {
+    padding: 20px;
+    height: 195vh;
+  }
+  .footer-links {
+    text-align: center;
+  }
+  .footer-link-wrapper {
+    margin-left: 20px;
+    text-align: center;
+  }
+  .footer-subscription {
+    margin-top: -200px;
+  }
+}

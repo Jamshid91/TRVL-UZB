@@ -1,75 +1,85 @@
 import React from "react";
-import { UseForm } from "./UseForm";
+import validate from "./validateInfo";
+import useForm from "./useForm";
+import { TextField } from "@material-ui/core";
 
-export const FormSignup = () => {
-  const { handleChange, values, handleSubmit } = UseForm();
+const FormSignup = ({ submitForm }) => {
+  const { handleChange, handleSubmit, values, errors } = useForm(
+    submitForm,
+    validate
+  );
+
   return (
-    <div className="form-content-right">
-      <form className="form" onChange={handleSubmit}>
-        <h1>form</h1>
+    <div className="form-content">
+      <form onSubmit={handleSubmit} className="form" noValidate>
+        <h2>Начни с нами сегодня! Создайте свой аккаунт</h2>
         <div className="form-inputs">
-          <label htmlFor="username" className="form-label">
-            Ваше Имя
-          </label>
-          <input
-            id="username"
-            type="text"
-            name="username"
+          <TextField
             className="form-input"
-            placeholder=" Имя"
+            label="Введите ваше имя"
+            name="username"
             value={values.username}
             onChange={handleChange}
+            margin="normal"
+            variant="outlined"
+            autoComplete="off"
+            fullWidth
           />
+          {errors.username && <p>{errors.username}</p>}
         </div>
         <div className="form-inputs">
-          <label htmlFor="username" className="form-label">
-            Ваш Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
+          <TextField
             className="form-input"
-            placeholder="Email"
+            label="Введите email"
+            name="email"
             value={values.email}
             onChange={handleChange}
+            margin="normal"
+            variant="outlined"
+            autoComplete="off"
+            fullWidth
           />
+          {errors.email && <p>{errors.email}</p>}
         </div>
         <div className="form-inputs">
-          <label htmlFor="password" className="form-label">
-            Ваш Пароль
-          </label>
-          <input
-            id="password"
-            type="password"
-            name="password"
+          <TextField
             className="form-input"
-            placeholder="Пароль"
+            label="Введите пароль"
+            name="password"
+            type="password"
             value={values.password}
             onChange={handleChange}
+            margin="normal"
+            variant="outlined"
+            autoComplete="off"
+            fullWidth
           />
+          {errors.password && <p>{errors.password}</p>}
         </div>
         <div className="form-inputs">
-          <label htmlFor="password2" className="form-labe">
-            Сравните пароль
-          </label>
-          <input
-            id="password2"
-            type="password"
-            name="password2"
+          <TextField
             className="form-input"
-            placeholder="Сравните пароль"
+            label="Введите email"
+            name="password2"
+            type="password"
             value={values.password2}
             onChange={handleChange}
+            margin="normal"
+            variant="outlined"
+            autoComplete="off"
           />
+          {errors.password2 && <p>{errors.password2}</p>}
         </div>
-        <button className="form-input-btn" type="submit">
+        <button
+          className="form-input-btn"
+          type="submit"
+          buttonStyle="btn--outline"
+        >
           Зарегистрироваться
         </button>
-        <span className="form-input-login">
-          У вас есть account? <a href="#">here</a>{" "}
-        </span>
       </form>
     </div>
   );
 };
+
+export default FormSignup;
